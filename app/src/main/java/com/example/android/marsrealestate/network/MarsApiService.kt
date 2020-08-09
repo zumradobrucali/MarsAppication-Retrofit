@@ -43,7 +43,6 @@ private val retrofit = Retrofit.Builder()
 interface MarsApiService {
     @GET("realestate")
     fun getProperties(@Query("filter") type: String):
-    // The Coroutine Call Adapter allows us to return a Deferred, a Job with a result
             Deferred<List<MarsProperty>>
 }
 
